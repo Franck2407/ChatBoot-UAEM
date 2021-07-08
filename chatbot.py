@@ -3,7 +3,7 @@
 """
 Created on Sun Jun 27 17:48:49 2021
 
-@author: gustavo y francisco 
+@author: Gustavo Rodriguez Calzada y Francisco Javier Miguel Garcia 
 """
 
 # Declarar variables
