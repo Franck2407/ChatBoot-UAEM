@@ -22,6 +22,14 @@ import numpy as np
 import tensorflow
 import random
 import json
+# Finalmente imprimiremos la eficiencia y pérdida del modelo
+# Epoca por epoca para ver su evolución
+import matplotlib.pyplot as plt
+
+# Librerias para los modulos de reconocimientos de entidades con numeros
+import re 
+import math
+
 
 #wb.open_new("1.pdf")
 
@@ -37,7 +45,6 @@ from nltk.tokenize import RegexpTokenizer
 from nltk.tokenize.treebank import TreebankWordDetokenizer
 from nltk.corpus import stopwords
 from keras.preprocessing.text import Tokenizer
-import re
 
 # Importamos la libreria para generar matriz de entrada de textos
 # Importamos pad_sequence y texts_to_sequencespara proceso de padding
@@ -54,13 +61,6 @@ from keras.layers.core import Dense
 from keras.layers import LSTM
 from keras.layers.embeddings import Embedding
 
-# Finalmente imprimiremos la eficiencia y pérdida del modelo
-# Epoca por epoca para ver su evolución
-import matplotlib.pyplot as plt
-
-# Librerias para los modulos de reconocimientos de entidades con numeros
-import re 
-import math
 
 
 
