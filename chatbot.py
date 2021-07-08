@@ -367,6 +367,13 @@ def Raiz(inp):
     if num_act == 0:
         print('\nChatBot: '+random.choice(Raiz_Unknown)+'\n')        
 
+def pdff(inp):
+    
+    if inp:    
+        print('\nChatBot: ')
+        wb.open_new('/home/gustavo/Escritorio/pdfff/CV_Gustavo_Rodriguez_Calzadaa.pdf')
+    else:
+        print("LO SIENTOOOOOO")
 
 
 # FUNCIÓN DE FUNCIONAMIENTO PARA EL CHATBOT 
@@ -415,11 +422,10 @@ def chat():
                     Country(inp)
                 elif tag == "Raiz_Cuadrada":
                     Raiz(inp)
+                elif tag == "Pdfff":
+                    pdff(inp)
                 else:
                     print('\nChatBot: '+ str(random.choice(responses)) + '[' + str(tag) + ']\n')
-            else:
-                if weak == 0:
-                    print('\nChatBot: Lo siento, pero no comprendí. ¿Podrías responder de otra forma?\n')
 
 print("Categorias del ChatBot: ")
 print('Categorias: '+str(str(labels)+'\n'))

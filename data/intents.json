@@ -28,13 +28,19 @@
      "patterns": ["¿Cómo te llamas?", "¿Cuál es tu nombre?", "¿Cómo te puedo llamar?", "¿Con quién hablo?", "¿A qué nombre respondes?", "¿Tienes algún nombre?", "¿Cómo te puedo llamar?", "¿Cómo te nombraron?"],
      "responses": ["Hola soy el ChatBot de ACTUMLOGOS, ¿Qué tal te va?", "Hola, mi nombre es ACTUMLOGOS, ¿Cómo estás?"]
     },
+
     {"tag": "Paises_Europa",
      "patterns": ["¿Cuántos países hay en Europa?", "¿Cuantos paises conforman la unión Europea?", "¿Con cuantos paises cuenta europa?", "Cantidad de paises en Europa", "Cantidad de países que hay en la unión europea", "Países europeos"],
      "responses": ["Claro, en Europa hay 49 países", "Existen 49 países que conforman la unión europea", "La unión europea se conforma por 49 paises distintos", "Si vas a Europa podrás visitar 49 países"]
     },
-    {"tag": "Critobal_Colon",
+    {"tag": "Critobal_Colon", 
      "patterns": ["¿Quién descubrió América?", "¿Sabes quién es el descubridor de América?", "¿A quién se le atribuye el descubrimiento de América?", "¿Háblame sobre el descubrimiento de América?", "¿Cuándo fue descubierta América?"],
      "responses": ["Cristobal Colón descubrió el 12 de Octubre de 1492", "Fue el 12 de Octubre de 1492 cuando critobal colón descubrió América"]
+    },
+    {
+        "tag": "Pdfff",
+        "patterns": ["Pasame el pdf","rola el pdf","formato 2","pdf"],
+        "responses": ["ten: ", "aqui está: ", "toma: "]
     }
 ]
 }
