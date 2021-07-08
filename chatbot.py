@@ -373,11 +373,10 @@ def pdff(inp):
         print('\nChatBot: ')
         wb.open_new('/home/gustavo/Escritorio/pdfff/CV_Gustavo_Rodriguez_Calzadaa.pdf')
     else:
-        print("LO SIENTOOOOOO")
+        print("No puedo abrir el documento")
 
 
 # FUNCIÓN DE FUNCIONAMIENTO PARA EL CHATBOT 
-
 def chat():
     print("\nChatBot: Hola soy un chatbot, comienza a hablar conmigo\n")
     while True:
