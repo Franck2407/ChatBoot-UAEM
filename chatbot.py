@@ -3,7 +3,8 @@
 """
 Created on Sun Jun 27 17:48:49 2021
 
-@author: Gustavo Rodriguez Calzada y Francisco Javier Miguel Garcia 
+@author: Gustavo Rodriguez Calzada y Francisco Javier Miguel Garcia
+Proyecto de tesis 
 """
 
 # Declarar variables
