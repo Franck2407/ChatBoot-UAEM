@@ -42,6 +42,7 @@ from keras.utils.np_utils import to_categorical
 # y realizar la instalación de "nltk-allpackages"
 
 # Descargamos un diccionario de todas las stopwords
+#Comentr para que se ejecute mas rapido
 #nltk.download('stopwords')
 from nltk.tokenize import RegexpTokenizer
 from nltk.tokenize.treebank import TreebankWordDetokenizer
@@ -183,8 +184,8 @@ for sen in texts:
 # Generar un diccionario de embeddings    
 embeddings_dictionary = dict()
 # Archivo word2vect en español
-Embeddings_file = open('/home/gustavo/Descargas/Word2Vect_Spanish.txt', encoding="utf8")
-# Embeddings_file = open('C:/Users/franc/Documents/Tesis/Proyecto/Word2Vect_Spanish.txt', encoding="utf8")
+#Embeddings_file = open('/home/gustavo/Descargas/Word2Vect_Spanish.txt', encoding="utf8")
+Embeddings_file = open('C:/Users/franc/Documents/Tesis/Word2Vect_Spanish.txt', encoding="utf8")
 
 # Extraer las características del archivo de embeddings
 # y las agregamos a un diccionario (Cada elemento es un vector)
@@ -374,6 +375,7 @@ def pdff(inp):
     
     if inp:    
         print('\nChatBot: ')
+        #wb.open_new('/home/gustavo/Escritorio/pdfff/CV_Gustavo_Rodriguez_Calzadaa.pdf')
         wb.open_new('/home/gustavo/Escritorio/pdfff/CV_Gustavo_Rodriguez_Calzadaa.pdf')
     else:
         print("No puedo abrir el documento")
