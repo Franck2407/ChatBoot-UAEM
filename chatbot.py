@@ -381,18 +381,6 @@ def pdff(inp):
         print("No puedo abrir el documento")
 
 
-def horarios(inp):
-    if inp:
-        for respuesta in data['intents']:
-            print("\nChatbot: El horario es ", random.choice(respuesta['responses']))
-    else:
-        print("No se los horarios")
-
-
-
-
-
-
 # FUNCIÓN DE FUNCIONAMIENTO PARA EL CHATBOT 
 def chat():
     print("\nChatBot: Hola soy un chatbot, comienza a hablar conmigo\n")
@@ -440,8 +428,6 @@ def chat():
                     Raiz(inp)
                 elif tag == "Pdfff":
                     pdff(inp)
-                elif tag == "Horarios":
-                    horarios(inp)
                 else:
                     print('\nChatBot: '+ str(random.choice(responses)) + '[' + str(tag) + ']\n')
 
