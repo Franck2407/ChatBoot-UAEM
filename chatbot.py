@@ -383,9 +383,14 @@ def pdff(inp):
 
 def horarios(inp):
     if inp:
-        print("\nChatbot: El horario es "+data[])
+        print("\nChatbot: El horario es "+data[responses[0]]['horario'])
     else:
         print("No se los horarios")
+
+
+
+
+
 
 # FUNCIÓN DE FUNCIONAMIENTO PARA EL CHATBOT 
 def chat():
