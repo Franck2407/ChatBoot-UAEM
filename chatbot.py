@@ -3,7 +3,9 @@
 """
 Created on Sun Jun 27 17:48:49 2021
 
-@author: Gustavo Rodriguez Calzada y Francisco Javier Miguel Garcia 
+@author: Gustavo Rodriguez Calzada y Francisco Javier Miguel Garcia
+Proyecto de tesis 
+Acesor Asdrubal Lopez Chau
 """
 
 # Declarar variables
@@ -181,7 +183,8 @@ for sen in texts:
 # Generar un diccionario de embeddings    
 embeddings_dictionary = dict()
 # Archivo word2vect en español
-Embeddings_file = open('C:/Users/franc/Documents/Tesis/Proyecto/Word2Vect_Spanish.txt', encoding="utf8")
+Embeddings_file = open('/home/gustavo/Descargas/Word2Vect_Spanish.txt', encoding="utf8")
+# Embeddings_file = open('C:/Users/franc/Documents/Tesis/Proyecto/Word2Vect_Spanish.txt', encoding="utf8")
 
 # Extraer las características del archivo de embeddings
 # y las agregamos a un diccionario (Cada elemento es un vector)
@@ -373,11 +376,11 @@ def pdff(inp):
         print('\nChatBot: ')
         wb.open_new('/home/gustavo/Escritorio/pdfff/CV_Gustavo_Rodriguez_Calzadaa.pdf')
     else:
-        print("LO SIENTOOOOOO")
+        print("No puedo abrir el documento")
+
 
 
 # FUNCIÓN DE FUNCIONAMIENTO PARA EL CHATBOT 
-
 def chat():
     print("\nChatBot: Hola soy un chatbot, comienza a hablar conmigo\n")
     while True:
@@ -424,6 +427,8 @@ def chat():
                     Raiz(inp)
                 elif tag == "Pdfff":
                     pdff(inp)
+                elif tag == "Horarios":
+                    horarios(inp)
                 else:
                     print('\nChatBot: '+ str(random.choice(responses)) + '[' + str(tag) + ']\n')
 
