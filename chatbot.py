@@ -381,7 +381,7 @@ def pdff(inp):
 
 def horarios(inp):
     if inp:
-        print("\nChatbot: El horario es ")
+        print("\nChatbot: El horario es "+data[])
     else:
         print("No se los horarios")
 
