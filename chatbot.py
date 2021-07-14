@@ -5,10 +5,7 @@ Created on Sun Jun 27 17:48:49 2021
 
 @author: Gustavo Rodriguez Calzada y Francisco Javier Miguel Garcia
 Proyecto de tesis 
-<<<<<<< HEAD
 Acesor Asdrubal Lopez Chau
-=======
->>>>>>> 8898c2ec647b8c5eb738670000aa1cd192713596
 """
 
 # Declarar variables
