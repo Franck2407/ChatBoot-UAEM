@@ -374,6 +374,7 @@ def pdff(inp):
     
     if inp:    
         print('\nChatBot: ')
+        #wb.open_new('/home/gustavo/Escritorio/pdfff/CV_Gustavo_Rodriguez_Calzadaa.pdf')
         wb.open_new('/home/gustavo/Escritorio/pdfff/CV_Gustavo_Rodriguez_Calzadaa.pdf')
     else:
         print("No puedo abrir el documento")
