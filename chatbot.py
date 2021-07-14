@@ -379,6 +379,11 @@ def pdff(inp):
         print("No puedo abrir el documento")
 
 
+def horarios(inp):
+    if inp:
+        print("\nChatbot: El horario es ")
+    else:
+        print("No se los horarios")
 
 # FUNCIÓN DE FUNCIONAMIENTO PARA EL CHATBOT 
 def chat():
