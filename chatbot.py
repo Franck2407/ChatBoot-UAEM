@@ -184,8 +184,8 @@ for sen in texts:
 # Generar un diccionario de embeddings    
 embeddings_dictionary = dict()
 # Archivo word2vect en español
-#Embeddings_file = open('/home/gustavo/Descargas/Word2Vect_Spanish.txt', encoding="utf8")
-Embeddings_file = open('C:/Users/franc/Documents/Tesis/Word2Vect_Spanish.txt', encoding="utf8")
+Embeddings_file = open('/home/gustavo/Descargas/Word2Vect_Spanish.txt', encoding="utf8")
+#Embeddings_file = open('C:/Users/franc/Documents/Tesis/Word2Vect_Spanish.txt', encoding="utf8")
 
 # Extraer las características del archivo de embeddings
 # y las agregamos a un diccionario (Cada elemento es un vector)
@@ -383,7 +383,8 @@ def pdff(inp):
 
 def horarios(inp):
     if inp:
-        print("\nChatbot: El horario es "+data[])
+        for respuesta in data['intents']:
+            print("\nChatbot: El horario es ", random.choice(respuesta['responses']))
     else:
         print("No se los horarios")
 
