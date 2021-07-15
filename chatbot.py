@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sun Jun 27 17:48:49 2021
-
 @author: Gustavo Rodriguez Calzada y Francisco Javier Miguel Garcia
 Proyecto de tesis 
-Acesor Asdrubal Lopez Chau
+Acesor: Asdrubal Lopez Chau
 """
 
 # Declarar variables
@@ -17,7 +15,7 @@ Acesor Asdrubal Lopez Chau
     json: formato JSON
 '''
 
-# Importamos librerias de nltk y keras para filtrado de StopWords y Tokenicación
+# Importamos librerias de nltk y keras para filtrado de StopWords y Tokenización
 import webbrowser as wb
 import nltk
 import numpy as np
@@ -25,30 +23,26 @@ import tensorflow
 import random
 import json
 # Finalmente imprimiremos la eficiencia y pérdida del modelo
-# Epoca por epoca para ver su evolución
-import matplotlib.pyplot as plt
-
-
-
-
-#wb.open_new("1.pdf")
 
 # Declaramos librerias para convertir el vector de salida, en una matriz categórica
 from keras.utils.np_utils import to_categorical
 
-# Si Colab marca un error en la línea 13, deberás ejecutar la siguiente línea
+#IMPORTANTE EN CASO DE ERROR
+    # Si Colab marca un error en la línea 13, deberás ejecutar la siguiente línea
 # y realizar la instalación de "nltk-allpackages"
 
 # Descargamos un diccionario de todas las stopwords
-#Comentr para que se ejecute mas rapido
+#Comentar para que se ejecute mas rapido (pero descomentar una ves por semana para mantenerse actualizado)
+
 #nltk.download('stopwords')
+
 from nltk.tokenize import RegexpTokenizer
 from nltk.tokenize.treebank import TreebankWordDetokenizer
 from nltk.corpus import stopwords
 from keras.preprocessing.text import Tokenizer
 
 # Importamos la libreria para generar matriz de entrada de textos
-# Importamos pad_sequence y texts_to_sequencespara proceso de padding
+# Importamos pad_sequence y texts_to_sequences para proceso de padding
 from keras.preprocessing.sequence import pad_sequences
 
 # Declaración de las líbrerias para manejo de arreglos
@@ -65,11 +59,12 @@ from keras.layers.embeddings import Embedding
 # Importando Script notEasy (Respuestas que tienen acción en código, NO DIRECTA)
 from notEasy import *
 
-
+#Esto nos servira para que ya no sea de manera local, y cualquier persona que tenga acceso al drive cambie las preguntas y respuetas
 # SI ES PARA IMPORTARLO DE DRIVE
 # Lectura de .json con los intents y las respuestas de cada clase
 # with open('/content/drive/My Drive/Intenciones.json', encoding='utf-8') as file:
 #    data = json.load(file)
+    
 
 
 # SI ES IMPORTAR DE MANERA LOCAL
@@ -89,8 +84,6 @@ for intent in data['intents']:
     if intent['tag'] not in labels:
         labels.append(intent['tag'])        
     
-#print(texts)    
-
 
 # Daremos valor a cada una de las etiquetas
 output = []
@@ -105,14 +98,9 @@ for intent in data['intents']:
         # En la lista de clases o labels
         output.append(labels.index(intent['tag']))
 
-#print("Vector de salidas Y:")        
-#print(output)
-
 
 # Generamos la matriz de salidas
 train_labels = to_categorical(output, num_classes=len(labels))
-#print('Matriz de salidas')
-#print(train_labels)
 
 # Palabras que no me van a a portar nada para yo entender las frases de usuarios
 # Palabras que no significan nada: los, las, etc. Se repiten mucho, pero no aportan NADA
@@ -120,8 +108,6 @@ train_labels = to_categorical(output, num_classes=len(labels))
 # El preprocesamiento generalmente busca eliminar StopWords
 # Acentos, caracteres especiales y convertir todo a minusculas
 # Para contar con la información lo más limpia y relevante posible.
-
-
 
 stop_words = stopwords.words('spanish')
 
@@ -156,10 +142,8 @@ for sen in texts:
     # Agregar al arreglo los textos "destokenizados" (Como texto nuevamente)
     X.append(TreebankWordDetokenizer().detokenize(result))
     
-    # Imprimirlos la lista de enunciados que resultan
-    #print(X)
-    
-    
+
+    ############################PROBAR CHECKPOINT#####################################
     # CANTIDAD DE PALABRAS MÁXIMAS POR VECTOR DE ENTRADA
     # Numero que sea, dependiendo a la app del programa
     maxlen_user = 5
@@ -176,18 +160,17 @@ for sen in texts:
     # Especificamos la matriz (con padding de posiciones iguales a maxlen)
     X_train = pad_sequences(X_seq, padding='post', maxlen=maxlen_user)
     
-    #print("Matriz de entrada: ")
-    #print(X_train)
-    
 
 # Generar un diccionario de embeddings    
 embeddings_dictionary = dict()
 # Archivo word2vect en español
-Embeddings_file = open('/home/gustavo/Descargas/Word2Vect_Spanish.txt', encoding="utf8")
-#Embeddings_file = open('C:/Users/franc/Documents/Tesis/Word2Vect_Spanish.txt', encoding="utf8")
+# No se sube a gitHub por que no lo permite y solo lo tenemos de manera local
 
-# Extraer las características del archivo de embeddings
-# y las agregamos a un diccionario (Cada elemento es un vector)
+##############CAMBIAR RUTA CADA QUE SE EJECUTE DESPUES DE GITHUB#####################
+#Embeddings_file = open('/home/gustavo/Descargas/Word2Vect_Spanish.txt', encoding="utf8")
+Embeddings_file = open('C:/Users/franc/Documents/Tesis/Word2Vect_Spanish.txt', encoding="utf8")
+
+# Extraer las características del archivo de embeddings y las agregamos a un diccionario (Cada elemento es un vector)
 
 # Leer cada una de las lineas del diccionario
 for linea in Embeddings_file:
@@ -199,6 +182,7 @@ for linea in Embeddings_file:
     palabra = caracts[0]
     
     # Vector con valores numericos del espacio 1 en adelante
+    ##########################CHECKPOINT#####################################################
     vector = asarray(caracts[1:], dtype='float32')
 
     # Diccionario de embeddings de la palabra
@@ -225,11 +209,8 @@ for word, index in tokenizer.word_index.items():
 
 # ARQUITECTURA NEURONAL
 # RED LSTM
-# Memoria de corto y largo plazo (Funciona mejor en chatbos)
+# Memoria de corto y largo plazo (Funciona mejor en chatbot)
 # Encuentra palabras que logren encajar mejor para una frase
-
-# Dropout
-
 
 # Declaración de las capas del modelo LSTM
 model = Sequential()
@@ -244,39 +225,16 @@ model.add(LSTM(100, dropout=0.2, recurrent_dropout=0.2))
 # Capa de activación softmax
 model.add(Dense(len(labels), activation='softmax'))
 
-
 # Compilación del modelo
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-#print(model.summary())
-
-#print('\nPalabras en el vocabulario: ')
-#print(vocal_size)
-
-# ENTRENAMIENTO DE LOS DATOS QUE PROPORCIONE
 
 # Ajuste de los datos de entrenamiento al modelo creado
 history = model.fit(X_train, train_labels, epochs=30, batch_size=8, verbose=1)
 
 # Cálculo de los porcentajes de Eficiencia y Pérdida
 score = model.evaluate(X_train, train_labels, verbose=1)
-#print('\nTest Loss: ', score[0])
-#print('\nTest Accuracy: ', score[1])
-
-# GRAFICAR LA EFICIENCIA Y PERDIDA EN CADA EPOCA
-'''
-plt.figure(figsize=(12.5))
-plt.ylim(-0.1,1.1)
-plt.plot(history.history['accuracy'])
-plt.plot(history.history['loss'])
-plt.title('Model Accuracy')
-plt.xlabel('Epoch')
-plt.ylabel('Accuracy')
-plt.legend(['Acc', 'Loss'])
-plt.show()
-'''
 
 # PRUEBAS DEL MODELO DEL CHATBOT
-
 # Módulo instanciador de entradas para el chatbot
 # Convierte el texto de entrada en la secuencia de valores enteros
 # con pad_sequences, elimina signos de interrogación y acentos
@@ -297,15 +255,11 @@ def Instancer(inp):
     padded = pad_sequences(seq, maxlen=maxlen_user)
     return padded
 
-
-
-
-# FUNCIÓN DE FUNCIONAMIENTO PARA EL CHATBOT 
+# FUNCIÓN PARA EL FUNCIONAMIENTO CHATBOT 
 def chat():
     print("\nChatBot: Hola soy un chatbot, comienza a hablar conmigo\n")
     while True:
         inp = input("   Tú: ")
-
         # Instrucción de fin de conversación (Cerrar el proceso)
         if inp.lower() == "salir":
             print("\nChatBot: Adios, vuelve prontooo\n")
@@ -352,7 +306,6 @@ def chat():
 
 print("Categorias del ChatBot: ")
 print('Categorias: '+str(str(labels)+'\n'))
-
 
 # ACTIVANDO EL CHATBOT
 chat()
