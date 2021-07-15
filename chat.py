@@ -1,4 +1,5 @@
 from Train import *
+from notEasy import *
 
 # FUNCIÓN PARA EL FUNCIONAMIENTO CHATBOT 
 def chat():
@@ -27,9 +28,9 @@ def chat():
             print('Score del intent: '+ str(maxscore))
 
             # Con base en el tag se le asigna la intención del usuario
-            for tg in data["intents"]:
-                if tg['tag'] == tag:
-                    responses = tg['responses']
+            for tg in data["intentos"]:
+                if tg['clave'] == tag:
+                    responses = tg['respuestas']
 
             # Respuesta de la gramática débil
             weak = Weak_gramars(inp)
@@ -40,9 +41,7 @@ def chat():
 
                 # Si se detecta una intención que esté asociada a entidades se envía a 
                 # su respectivo módulo
-                if tag == "Capital":
-                    Country(inp)
-                elif tag == "Raiz_Cuadrada":
+                if tag == "Raiz_Cuadrada":
                     Raiz(inp)
                 elif tag == "Pdfff":
                     pdff(inp)
