@@ -22,6 +22,7 @@ import numpy as np
 import tensorflow
 import random
 import json
+import re
 # Finalmente imprimiremos la eficiencia y pérdida del modelo
 
 # Declaramos librerias para convertir el vector de salida, en una matriz categórica
@@ -57,7 +58,6 @@ from keras.layers import LSTM
 from keras.layers.embeddings import Embedding
 
 # Importando Script notEasy (Respuestas que tienen acción en código, NO DIRECTA)
-from notEasy import *
 
 #Esto nos servira para que ya no sea de manera local, y cualquier persona que tenga acceso al drive cambie las preguntas y respuetas
 # SI ES PARA IMPORTARLO DE DRIVE
@@ -76,13 +76,13 @@ labels = []
 texts = []
 
 # Recopilación de textos para cada clase
-for intent in data['intents']:
-    for pattern in intent['patterns']:
+for intent in data['intentos']:
+    for pattern in intent['preguntas']:
         texts.append(pattern)        
 
     # Creación de una lista con nombres de las clases
-    if intent['tag'] not in labels:
-        labels.append(intent['tag'])        
+    if intent['clave'] not in labels:
+        labels.append(intent['clave'])        
     
 
 # Daremos valor a cada una de las etiquetas
@@ -91,12 +91,12 @@ output = []
 # Generamos el vector de respuestas
 # Cada clase tiene una salida numérica asociada
 
-for intent in data['intents']:
-    for pattern in intent['patterns']:
+for intent in data['intentos']:
+    for pattern in intent['preguntas']:
         
         # El ID de la clase es su indice
         # En la lista de clases o labels
-        output.append(labels.index(intent['tag']))
+        output.append(labels.index(intent['clave']))
 
 
 # Generamos la matriz de salidas
@@ -254,58 +254,3 @@ def Instancer(inp):
     seq = tokenizer.texts_to_sequences(txt)
     padded = pad_sequences(seq, maxlen=maxlen_user)
     return padded
-
-# FUNCIÓN PARA EL FUNCIONAMIENTO CHATBOT 
-def chat():
-    print("\nChatBot: Hola soy un chatbot, comienza a hablar conmigo\n")
-    while True:
-        inp = input("   Tú: ")
-        # Instrucción de fin de conversación (Cerrar el proceso)
-        if inp.lower() == "salir":
-            print("\nChatBot: Adios, vuelve prontooo\n")
-            break
-
-        # La gramatica fuerte es dominante (Si aparece no es necesario)
-        # Evaluar la intención
-        Strong = Strong_grammars(inp)
-        if Strong == 0:
-
-            # De cada entrada al sistema (inp), clasifica segun el modelo creado
-            # y asigna un tag (Categoria)
-            # Se usa argmax para regresar aquel que tiene mayor peso
-            results = model.predict(Instancer(inp))
-            results_index = np.argmax(results)
-            tag = labels[results_index]
-
-            # Valor de la clase con mayor score
-            maxscore = np.max(results)
-            print('Score del intent: '+ str(maxscore))
-
-            # Con base en el tag se le asigna la intención del usuario
-            for tg in data["intents"]:
-                if tg['tag'] == tag:
-                    responses = tg['responses']
-
-            # Respuesta de la gramática débil
-            weak = Weak_gramars(inp)
-
-            # Elegir una respuesta aleatoria de la Response Pool (Si supera el umbral)
-            # Umbral de desición
-            if maxscore > 0.5:
-
-                # Si se detecta una intención que esté asociada a entidades se envía a 
-                # su respectivo módulo
-                if tag == "Capital":
-                    Country(inp)
-                elif tag == "Raiz_Cuadrada":
-                    Raiz(inp)
-                elif tag == "Pdfff":
-                    pdff(inp)
-                else:
-                    print('\nChatBot: '+ str(random.choice(responses)) + '[' + str(tag) + ']\n')
-
-print("Categorias del ChatBot: ")
-print('Categorias: '+str(str(labels)+'\n'))
-
-# ACTIVANDO EL CHATBOT
-chat()
