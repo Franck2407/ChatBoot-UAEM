@@ -41,6 +41,11 @@
         "tag": "Pdfff",
         "patterns": ["Pasame el pdf","rola el pdf","formato 2","pdf"],
         "responses": ["ten: ", "aqui está: ", "toma: "]
+    },
+    {
+        "tag": "Horarios",
+        "patterns": ["¿A qué hora abren?", "a que hora abren", "cual es son sus horarios", "a que hora cierran", "horarios disponibles"],
+        "responses": ["7 de la mañana a 8 de la noche", "7 am a 8pm","En la mañana a las 7 y en la noche hasta las 8"]
     }
 ]
 }
