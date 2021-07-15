@@ -254,7 +254,7 @@ def Instancer(inp):
     seq = tokenizer.texts_to_sequences(txt)
     padded = pad_sequences(seq, maxlen=maxlen_user)
     return padded
-
+"""
 # FUNCIÓN PARA EL FUNCIONAMIENTO CHATBOT 
 def chat():
     print("\nChatBot: Hola soy un chatbot, comienza a hablar conmigo\n")
@@ -309,3 +309,4 @@ print('Categorias: '+str(str(labels)+'\n'))
 
 # ACTIVANDO EL CHATBOT
 chat()
+"""
