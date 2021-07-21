@@ -1,18 +1,39 @@
-{"intentos": [
+{"intentos": 
+    [
+        {
+            "clave": "Saludo",
+            "preguntas": ["Hola", "Holi", "Cómo estás", "Que tal", "Como te va"],
+            "respuestas": ["Hola, ¿Cómo estás?", "Un gusto de saludarte", "Me da gusto verte de nuevo", "Que pedo"]
+        },
     
-    {"clave": "Raiz_Cuadrada",
-     "preguntas": ["¿Cuál es la raíz cuadrada de 12", "¿Puedes calcular la raíz cuadrada de 34.67?", "Dame la raíz cuadrada de 25", "A que no calculas la raíz de 34.56", "Calcúlame la raiz de 125.90"],
-     "respuestas": ["La raíz cuadrada es..."]
-    },
-    
-    {   "clave": "Pdfff",
-        "preguntas": ["Pasame el pdf","rola el pdf","formato 2","pdf"],
-        "respuestas": ["ten: ", "aqui está: ", "toma: "]
-    },
-    {
-        "clave": "Horarios",
-        "preguntas": ["¿A qué hora abren?", "a que hora abren", "cual es son sus horarios", "a que hora cierran", "horarios disponibles"],
-        "respuestas": ["7 de la mañana a 8 de la noche", "7 am a 8pm","En la mañana a las 7 y en la noche hasta las 8"]
-    }
-]
+        {
+            "clave": "Despedida",
+            "preguntas": ["Adios", "Bye", "Hasta luego", "Nos pemos", "Hasta pronto"],
+            "respuestas": ["Nos vemos, fue un gusto", "Que te vaya muy bien", "Regresa pronto, adios"]
+        },
+
+        {
+            "clave": "Agradecimiento",
+            "preguntas": ["Gracias", "Te agradezco", "Te doy las gracias"],
+            "respuestas": ["Por nada, es un placer", "Me da mucho gusto poder ayudar", "Denada, para eso estoy"]
+        },
+
+        {
+            "clave": "Raiz_Cuadrada",
+            "preguntas": ["¿Cuál es la raíz cuadrada de 12", "¿Puedes calcular la raíz cuadrada de 34.67?", "Dame la raíz cuadrada de 25", "A que no calculas la raíz de 34.56", "Calcúlame la raiz de 125.90"],
+            "respuestas": ["La raíz cuadrada es..."]
+        },
+        
+        {   
+            "clave": "Pdfff",
+            "preguntas": ["Pasame el pdf","rola el pdf","formato 2","pdf"],
+            "respuestas": ["ten: ", "aqui está: ", "toma: "]
+        },
+
+        {
+            "clave": "Horarios",
+            "preguntas": ["¿A qué hora abren?", "a que hora abren", "cual es son sus horarios", "a que hora cierran", "horarios disponibles"],
+            "respuestas": ["7 de la mañana a 8 de la noche", "7 am a 8pm","En la mañana a las 7 y en la noche hasta las 8"]
+        }
+    ]
 }
