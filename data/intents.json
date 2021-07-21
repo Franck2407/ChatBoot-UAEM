@@ -1,13 +1,5 @@
 {"intents": [
-    {"tag": "Capital",
-     "patterns": ["¿Cuál es la capital de Fráncia?", 
-                "¿Sabes cuál es la capital para España?", 
-                "En las capitales del mundo, ¿Cuál le pertenece a Inglaterra?", 
-                "Si te pregunto por la capital de México, ¿Cuál es?", 
-                "Háblame de cuál es la capital de Canadá"],
-                
-     "responses": ["La capital es..."]
-    },
+    
     {"tag": "Raiz_Cuadrada",
      "patterns": ["¿Cuál es la raíz cuadrada de 12", "¿Puedes calcular la raíz cuadrada de 34.67?", "Dame la raíz cuadrada de 25", "A que no calculas la raíz de 34.56", "Calcúlame la raiz de 125.90"],
      "responses": ["La raíz cuadrada es..."]
