@@ -20,19 +20,19 @@ def chat():
             # Se usa argmax para regresar aquel que tiene mayor peso
             results = model.predict(Instancer(inp))
             results_index = np.argmax(results)
-            clave = labels[results_index]
+            tag = labels[results_index]
 
             # Valor de la clase con mayor score
             maxscore = np.max(results)
             print('Score del intent: '+ str(maxscore))
 
             # Con base en el tag se le asigna la intención del usuario
-            for tg in data['intentos']:
-                if tg['clave'] == clave:
-                    respuestas = tg['respuestas']
+            for tg in data["intents"]:
+                if tg['tag'] == tag:
+                    responses = tg['responses']
 
             # Respuesta de la gramática débil
-            # weak = Weak_gramars(inp)
+            weak = Weak_gramars(inp)
 
             # Elegir una respuesta aleatoria de la Response Pool (Si supera el umbral)
             # Umbral de desición
@@ -40,12 +40,14 @@ def chat():
 
                 # Si se detecta una intención que esté asociada a entidades se envía a 
                 # su respectivo módulo
-                if clave == "Raiz_Cuadrada":
+                if tag == "Capital":
+                    Country(inp)
+                elif tag == "Raiz_Cuadrada":
                     Raiz(inp)
-                elif clave == "Pdfff":
+                elif tag == "Pdfff":
                     pdff(inp)
                 else:
-                    print('\nChatBot: '+ str(random.choice(respuestas)) + '[' + str(clave) + ']\n')
+                    print('\nChatBot: '+ str(random.choice(responses)) + '[' + str(tag) + ']\n')
 
 print("Categorias del ChatBot: ")
 print('Categorias: '+str(str(labels)+'\n'))
