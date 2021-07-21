@@ -46,10 +46,25 @@ def Strong_grammars(inp):
         index += 1
     return strong_act
 
+# RECONOCIMIENTO DE ENTIDADES
+Paises = {'Mexico': 'Mexico', 'Francia':'Paris', 'España':'Madrid', 'Inglaterra':'Londres'}
+Resp_Paises = ['Me gustaria poder visitarlo', 'Es hermoso ese lugar', 'Lastima que los chatbots no podemos ir a esos lugares :c '] 
+
+Paises_Unknown = ['Lo siento, no conozco la capital de ese pais', 'Soy chafa, no se la respuesta', 'No c bro, disculpa']
+
+def Country(inp):
+    pais_act = 0
+    for pais in Paises.keys():
+        if inp.lower().count(pais.lower()) > 0:
+            pais_act = 1 
+            print('\nChatBot: '+'La capital de '+ str(pais) + ' es: ' + str(Paises.get(pais)) + ', '+ random.choice(Resp_Paises)+'\n')
+    if pais_act == 0:
+        print('\nChatbot: ' + random.choice(Paises_Unknown)+'\n')
 
 # MODULO DE RECONOCIMIENTO DE ENTIDAD DE NUMEROS
 Resp_Raiz = ['Verdad que soy muy listo', 'Soy la verga', 'Soy muy bueno en matemáticas']
 Raiz_Unknown = ['Lo siento, me diste algún numero no valido', 'Puedes intentarlo con otro numero', 'No c bro, disculpa']
+
 
 def Raiz(inp):
     num_act = 0 
