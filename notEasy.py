@@ -4,6 +4,27 @@ import re
 import math
 import webbrowser as wb
 
+# MÓDULOS DE DETECCIÓN DE GRAMÁTICAS DÉBILES
+Saludos_In = ["Hola", "Holi", "Cómo estás", "Que tal", "Como te va"]    
+Despedidas_In = ["Adios", "Bye", "Hasta puego", "Nos pemos", "Hasta pronto"]
+Gracias_In = ["Gracias", "Te agradezco", "Te doy las gracias"]
+InsD = [Saludos_In, Despedidas_In, Gracias_In]
+
+Saludos_Out = ["Hola, ¿Cómo estás?", "Un gusto de saludarte", "Me da gusto verte de nuevo", "Que pedo"]
+Despedidas_Out  = ["Nos vemos, fue un gutso", "Que te vaya muy bien", "Regresa pronto, adios"]
+Gracias_Out = ["Por nada, es un placer", "Me da mucho gusto poder ayudar", "Denada, para eso estoy"]
+OutsD = [Saludos_Out, Despedidas_Out, Gracias_Out]
+
+def Weak_gramars(inp):
+    index = 0
+    weak_act = 0
+    for categoria in InsD:
+        for gramatica in categoria:
+            if inp.lower().count(gramatica.lower()) > 0:
+                weak_act = 1
+                print('\nChatBot: '+random.choice(OutsD[index]) + '  [Gramatica Débil]\n')
+        index += 1
+    return weak_act
 
 # MÓDULOS DE  DETECCIÓN DE GRAMATICAS FUERTES
 Insultos_In = ["Perra", "Puta", "Estúpida", "Maldita lisiada"]
@@ -55,8 +76,8 @@ def Raiz(inp):
     if num_act == 0:
         print('\nChatBot: '+random.choice(Raiz_Unknown)+'\n')        
 
-
-def pdff(inp):    
+def pdff(inp):
+    
     if inp:    
         print('\nChatBot: ')
         #wb.open_new('/home/gustavo/Escritorio/pdfff/CV_Gustavo_Rodriguez_Calzadaa.pdf')

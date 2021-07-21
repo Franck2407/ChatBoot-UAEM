@@ -167,8 +167,8 @@ embeddings_dictionary = dict()
 # No se sube a gitHub por que no lo permite y solo lo tenemos de manera local
 
 ##############CAMBIAR RUTA CADA QUE SE EJECUTE DESPUES DE GITHUB#####################
-Embeddings_file = open('/home/gustavo/Descargas/Word2Vect_Spanish.txt', encoding="utf8")
-#Embeddings_file = open('C:/Users/franc/Documents/Tesis/Word2Vect_Spanish.txt', encoding="utf8")
+#Embeddings_file = open('/home/gustavo/Descargas/Word2Vect_Spanish.txt', encoding="utf8")
+Embeddings_file = open('C:/Users/franc/Documents/Tesis/Word2Vect_Spanish.txt', encoding="utf8")
 
 # Extraer las características del archivo de embeddings y las agregamos a un diccionario (Cada elemento es un vector)
 
