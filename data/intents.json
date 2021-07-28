@@ -19,7 +19,7 @@
 
     {
         "tag": "Contactanos",
-        "patterns": ["¿Algun numero telefonico?", "numeros de telefono", "numero de telefono", "whatsapp", "algun whatsapp", "tienen whatsapp", "me puede enviar su numero", "me pasas tu numero", "como me contacto con ustedes"],
+        "patterns": ["¿Algun numero telefonico?", "numeros de telefono", "numero de telefono", "whatsapp", "algun whatsapp", "tienen whatsapp", "me puede enviar su numero", "me pasas tu numero", "como me contacto con ustedes", "telefono"],
         "responses": ["5555555555", "5555555555", "5555555555", "5555555555"]
     },
 
@@ -61,7 +61,7 @@
 
     {
         "tag": "Becas",
-        "patterns": ["que becas hay", "que becas me recomiendas", "habra alguna beca", "apoyos", "becas", "convocatorias de becas", "quiero una beca", "soy pobre"],
+        "patterns": ["que becas hay", "que becas me recomiendas", "habra alguna beca", "apoyos", "becas", "convocatorias de becas", "quiero una beca", "soy pobre"],          
         "responses": ["---BECA---"]
     },
     {
