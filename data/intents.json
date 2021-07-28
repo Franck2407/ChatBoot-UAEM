@@ -31,7 +31,7 @@
 
     {
         "tag": "Pagina_Face",
-        "patterns": ["tienes pagina de facebook", "tienen pagina de facebook", "facebook", "tienes feis", "pasa tu feisbu"],
+        "patterns": ["tienes pagina de facebook", "tienen pagina de facebook", "tienes feis", "pasa tu feisbu"],
         "responses": ["dame like: https://www.facebook.com/CU-UAEM-Zumpango-Oficial-1839730529378746/", "tenga: https://www.facebook.com/CU-UAEM-Zumpango-Oficial-1839730529378746/" ]
     },
 
@@ -61,7 +61,7 @@
 
     {
         "tag": "Becas",
-        "patterns": ["que becas hay", "que becas me recomiendas", "habra alguna beca", "apoyos", "becas", "convocatorias de becas", "quiero una beca", "soy pobre"],
+        "patterns": ["que becas hay", "que becas me recomiendas", "habra alguna beca", "apoyos", "becas", "convocatorias de becas", "quiero una beca", "soy pobre"],          
         "responses": ["---BECA---"]
     },
     {
