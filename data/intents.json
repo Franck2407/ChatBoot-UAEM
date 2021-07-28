@@ -1,34 +1,11 @@
 {"intents": [
     
-    {"tag": "Raiz_Cuadrada",
-     "patterns": ["¿Cuál es la raíz cuadrada de 12", "¿Puedes calcular la raíz cuadrada de 34.67?", "Dame la raíz cuadrada de 25", "A que no calculas la raíz de 34.56", "Calcúlame la raiz de 125.90"],
-     "responses": ["La raíz cuadrada es..."]
-    },
-    {"tag": "Idioma_Austria",
-     "patterns": ["¿Qué idioma se habla en Austria?", "¿En Austria qué idioma hablan?", "¿Sabes cuál es el idioma hablado en austria?", "¿En qué idioma me hablan si viajo a Austria?"],
-     "responses": ["En austria las persona hablan principalmente Alemán, aunque algunas personas hablan Francés", "Las personas en Austria hablan Alemán o Francés dependiendo de la región en la que se encuentren", "Alemán o Francés, aunque se odian las personas que hablan uno con las que hablan otro"]
-    },
-    {"tag": "Animal_mas_grande",
-     "patterns": ["¿Cuál es el animal más grande del mundo?", "Sabes cuál es el animal más grande en el mundo?", "¿En todo el mundo cuál es el animál más grande?", "Dime cuál animal es más grande en todo el planeta"],
-     "responses": ["El animan más grande en todo el mundo es la ballena azul", "El animal más grande en el mundo conocido por el hombre es la ballena azul", "Ese animal sería la ballena azul"]
-    },
-    {"tag": "ADN",
-     "patterns": ["¿Qué significa ADN?", "¿Qué significan las siglas de ADN?", "¿Las siglas de AND para qué son utilizadas?", "¿Me puedes decir qué significa ADN?"],
-     "responses": ["Significa Ácido Desoxiribonucléico", "Esa palabra es complicada, pero significa Ácido Desoxiribonucléico", "Pues significa Ácido Desoxiribonucléico"]
-    },
-    {"tag": "Nombre",
-     "patterns": ["¿Cómo te llamas?", "¿Cuál es tu nombre?", "¿Cómo te puedo llamar?", "¿Con quién hablo?", "¿A qué nombre respondes?", "¿Tienes algún nombre?", "¿Cómo te puedo llamar?", "¿Cómo te nombraron?"],
-     "responses": ["Hola soy el ChatBot de ACTUMLOGOS, ¿Qué tal te va?", "Hola, mi nombre es ACTUMLOGOS, ¿Cómo estás?"]
+    {
+        "tag": "Raiz_Cuadrada",
+        "patterns": ["¿Cuál es la raíz cuadrada de 12", "¿Puedes calcular la raíz cuadrada de 34.67?", "Dame la raíz cuadrada de 25", "A que no calculas la raíz de 34.56", "Calcúlame la raiz de 125.90"],
+        "responses": ["La raíz cuadrada es..."]
     },
 
-    {"tag": "Paises_Europa",
-     "patterns": ["¿Cuántos países hay en Europa?", "¿Cuantos paises conforman la unión Europea?", "¿Con cuantos paises cuenta europa?", "Cantidad de paises en Europa", "Cantidad de países que hay en la unión europea", "Países europeos"],
-     "responses": ["Claro, en Europa hay 49 países", "Existen 49 países que conforman la unión europea", "La unión europea se conforma por 49 paises distintos", "Si vas a Europa podrás visitar 49 países"]
-    },
-    {"tag": "Critobal_Colon", 
-     "patterns": ["¿Quién descubrió América?", "¿Sabes quién es el descubridor de América?", "¿A quién se le atribuye el descubrimiento de América?", "¿Háblame sobre el descubrimiento de América?", "¿Cuándo fue descubierta América?"],
-     "responses": ["Cristobal Colón descubrió el 12 de Octubre de 1492", "Fue el 12 de Octubre de 1492 cuando critobal colón descubrió América"]
-    },
     {
         "tag": "Pdfff",
         "patterns": ["Pasame el pdf","rola el pdf","formato 2","pdf"],
@@ -40,67 +17,68 @@
         "responses": ["7 de la mañana a 8 de la noche", "7 am a 8pm","En la mañana a las 7 y en la noche hasta las 8"]
     },
 
-
-
-
-
-
-
-
-
     {
-        "tag": "Horarios",
-        "patterns": ["¿A qué hora abren?", "a que hora abren", "cual es son sus horarios", "a que hora cierran", "horarios disponibles"],
-        "responses": ["7 de la mañana a 8 de la noche", "7 am a 8pm","En la mañana a las 7 y en la noche hasta las 8"]
+        "tag": "Contactanos",
+        "patterns": ["¿Algun numero telefonico?", "numeros de telefono", "numero de telefono", "whatsapp", "algun whatsapp", "tienen whatsapp", "me puede enviar su numero", "me pasas tu numero", "como me contacto con ustedes"],
+        "responses": ["5555555555", "5555555555", "5555555555", "5555555555"]
     },
 
     {
-        "tag": "Horarios",
-        "patterns": ["¿A qué hora abren?", "a que hora abren", "cual es son sus horarios", "a que hora cierran", "horarios disponibles"],
-        "responses": ["7 de la mañana a 8 de la noche", "7 am a 8pm","En la mañana a las 7 y en la noche hasta las 8"]
+        "tag": "Pagina_Web",
+        "patterns": ["tienen pagina web", "me pasas tu pagina", "pagina web", "rola tu pagina", "sitio web"],
+        "responses": ["http://www.cuzumpango.uaemex.mx/", "ten: http://www.cuzumpango.uaemex.mx/", "visitame: http://www.cuzumpango.uaemex.mx/", "tome: http://www.cuzumpango.uaemex.mx/"]
     },
 
     {
-        "tag": "Horarios",
-        "patterns": ["¿A qué hora abren?", "a que hora abren", "cual es son sus horarios", "a que hora cierran", "horarios disponibles"],
-        "responses": ["7 de la mañana a 8 de la noche", "7 am a 8pm","En la mañana a las 7 y en la noche hasta las 8"]
+        "tag": "Pagina_Facebook",
+        "patterns": ["tienes pagina de facebook", "tienen pagina de facebook", "facebook", "tienes feis", "pasa tu feisbu", "fb"],
+        "responses": ["dame like: https://www.facebook.com/CU-UAEM-Zumpango-Oficial-1839730529378746/", "tenga: https://www.facebook.com/CU-UAEM-Zumpango-Oficial-1839730529378746/" ]
     },
 
     {
-        "tag": "Horarios",
-        "patterns": ["¿A qué hora abren?", "a que hora abren", "cual es son sus horarios", "a que hora cierran", "horarios disponibles"],
-        "responses": ["7 de la mañana a 8 de la noche", "7 am a 8pm","En la mañana a las 7 y en la noche hasta las 8"]
+        "tag": "Whatsapp",
+        "patterns": ["pasa tu whatsapp", "tienen whatsapp", "whatsapp", "pasa tu guats", "algun numero para mandarles whatsapp", "les puedo mandar whatsapp"],
+        "responses": ["5555555555", "5555555555", "5555555555", "5555555555"]
     },
 
     {
-        "tag": "Horarios",
-        "patterns": ["¿A qué hora abren?", "a que hora abren", "cual es son sus horarios", "a que hora cierran", "horarios disponibles"],
-        "responses": ["7 de la mañana a 8 de la noche", "7 am a 8pm","En la mañana a las 7 y en la noche hasta las 8"]
+        "tag": "Calendario",
+        "patterns": ["calendario oficial", "vacaciones", "fechas de examenes", "fin de curso", "inicio de curso", "calendario", "periodo de evaluaciones", "termino de semestre", "inicio de semestre"],
+        "responses": ["Puedes encontrar la información en el PDF"]
     },
 
     {
-        "tag": "Horarios",
-        "patterns": ["¿A qué hora abren?", "a que hora abren", "cual es son sus horarios", "a que hora cierran", "horarios disponibles"],
-        "responses": ["7 de la mañana a 8 de la noche", "7 am a 8pm","En la mañana a las 7 y en la noche hasta las 8"]
+        "tag": "Avisos",
+        "patterns": ["que hay de novedad", "algo importante", "noticias recientes", "noticias", "que hay de nuevo", "noticias relevantes", "novedades", "cosas importantes"],
+        "responses": ["---Aviso---"]
     },
 
     {
-        "tag": "Horarios",
-        "patterns": ["¿A qué hora abren?", "a que hora abren", "cual es son sus horarios", "a que hora cierran", "horarios disponibles"],
-        "responses": ["7 de la mañana a 8 de la noche", "7 am a 8pm","En la mañana a las 7 y en la noche hasta las 8"]
+        "tag": "Roles",
+        "patterns": ["quien es el encargado", "quien esta a cargo", "quien esta en", "con quien me presento", "el boss"],
+        "responses": ["---ENCARGADO---"]
     },
 
     {
-        "tag": "Horarios",
-        "patterns": ["¿A qué hora abren?", "a que hora abren", "cual es son sus horarios", "a que hora cierran", "horarios disponibles"],
-        "responses": ["7 de la mañana a 8 de la noche", "7 am a 8pm","En la mañana a las 7 y en la noche hasta las 8"]
+        "tag": "Becas",
+        "patterns": ["que becas hay", "que becas me recomiendas", "habra alguna beca", "apoyos", "becas", "convocatorias de becas", "quiero una beca", "soy pobre"],
+        "responses": ["---BECA---"]
     },
     {
-        "tag": "Horarios",
-        "patterns": ["¿A qué hora abren?", "a que hora abren", "cual es son sus horarios", "a que hora cierran", "horarios disponibles"],
-        "responses": ["7 de la mañana a 8 de la noche", "7 am a 8pm","En la mañana a las 7 y en la noche hasta las 8"]
+        "tag": "Proceso_Inscripcion",
+        "patterns": ["como me inscribo", "proceso de inscripcion", "que debo hacer para inscribirme", "quiero saber los pasos para la inscripcion"],
+        "responses": ["---INSCRIPCION---"]
+    }, 
+    {
+        "tag": "Inscripcion_Linea",
+        "patterns": ["cuando me inscribo en linea", "cuando me toca inscribir", "cuando me toca inscribirme", "sabes cuando me toca inscribirme", "me quiero inscribir y no se cuando"],
+        "responses": ["---INSCRIPCION---"]
+    },
+    {
+        "tag": "Formato",
+        "patterns": ["pasame los documentos", "tienes el documento", "rola el documento", "me urge el documento"],
+        "responses": ["---DOC---"]
     }
-
 
 ]
 }
