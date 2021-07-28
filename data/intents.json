@@ -19,7 +19,7 @@
 
     {
         "tag": "Contactanos",
-        "patterns": ["¿Algun numero telefonico?", "numeros de telefono", "numero de telefono", "whatsapp", "algun whatsapp", "tienen whatsapp", "me puede enviar su numero", "me pasas tu numero", "como me contacto con ustedes"],
+        "patterns": ["¿Algun numero telefonico?", "numeros de telefono", "numero de telefono", "me puede enviar su numero", "me pasas tu numero", "como me contacto con ustedes", "como me comunico con ustedes"],
         "responses": ["5555555555", "5555555555", "5555555555", "5555555555"]
     },
 
@@ -30,14 +30,14 @@
     },
 
     {
-        "tag": "Pagina_Facebook",
-        "patterns": ["tienes pagina de facebook", "tienen pagina de facebook", "facebook", "tienes feis", "pasa tu feisbu", "fb"],
+        "tag": "Pagina_Face",
+        "patterns": ["tienes pagina de facebook", "tienen pagina de facebook", "facebook", "tienes feis", "pasa tu feisbu"],
         "responses": ["dame like: https://www.facebook.com/CU-UAEM-Zumpango-Oficial-1839730529378746/", "tenga: https://www.facebook.com/CU-UAEM-Zumpango-Oficial-1839730529378746/" ]
     },
 
     {
-        "tag": "Whatsapp",
-        "patterns": ["pasa tu whatsapp", "tienen whatsapp", "whatsapp", "pasa tu guats", "algun numero para mandarles whatsapp", "les puedo mandar whatsapp"],
+        "tag": "Whatsapp_C",
+        "patterns": ["pasa tu whatsapp", "tienen whatsapp", "whatsapp", "pasa tu guats", "les puedo mandar whatsapp"],
         "responses": ["5555555555", "5555555555", "5555555555", "5555555555"]
     },
 
