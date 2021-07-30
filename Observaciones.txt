@@ -11,3 +11,5 @@ Las preguntas no deen coincidir con otros tag ya que nos manda error
 
 checar que no coincida el tag ni el patterns 
 
+checar lo de tokenizacion y destokenizacion
+

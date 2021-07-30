@@ -19,21 +19,15 @@ Acesor: Asdrubal Lopez Chau
 import webbrowser as wb
 import nltk
 import numpy as np
-import tensorflow
 import random
 import json
-# Finalmente imprimiremos la eficiencia y pérdida del modelo
 
 # Declaramos librerias para convertir el vector de salida, en una matriz categórica
 from keras.utils.np_utils import to_categorical
 
-#IMPORTANTE EN CASO DE ERROR
-    # Si Colab marca un error en la línea 13, deberás ejecutar la siguiente línea
-# y realizar la instalación de "nltk-allpackages"
-
+###############################IMPORTANTE###############################
 # Descargamos un diccionario de todas las stopwords
-#Comentar para que se ejecute mas rapido (pero descomentar una ves por semana para mantenerse actualizado)
-
+#Comentar para que se ejecute mas rapido (para que este actualizado se recomienda ejecutar el programa una ves a la semana)
 #nltk.download('stopwords')
 
 from nltk.tokenize import RegexpTokenizer
@@ -66,12 +60,10 @@ from notEasy import *
 #    data = json.load(file)
     
 
-
 # SI ES IMPORTAR DE MANERA LOCAL
 # Lectura del JSON, con intents y respuestas de cada clase
 with open('data/intents.json', encoding= 'utf-8') as file:
-    data = json.load(file)
-    
+    data = json.load(file)    
 labels = []
 texts = []
 
@@ -84,7 +76,6 @@ for intent in data['intents']:
     if intent['tag'] not in labels:
         labels.append(intent['tag'])        
     
-
 # Daremos valor a cada una de las etiquetas
 output = []
 
@@ -103,12 +94,9 @@ for intent in data['intents']:
 train_labels = to_categorical(output, num_classes=len(labels))
 
 # Palabras que no me van a a portar nada para yo entender las frases de usuarios
-# Palabras que no significan nada: los, las, etc. Se repiten mucho, pero no aportan NADA
-
 # El preprocesamiento generalmente busca eliminar StopWords
 # Acentos, caracteres especiales y convertir todo a minusculas
 # Para contar con la información lo más limpia y relevante posible.
-
 stop_words = stopwords.words('spanish')
 
 # Para que cada enunciado quitamos las StopWords
@@ -160,17 +148,19 @@ for sen in texts:
     # Especificamos la matriz (con padding de posiciones iguales a maxlen)
     X_train = pad_sequences(X_seq, padding='post', maxlen=maxlen_user)
     
-
 # Generar un diccionario de embeddings    
 embeddings_dictionary = dict()
 # Archivo word2vect en español
 # No se sube a gitHub por que no lo permite y solo lo tenemos de manera local
 
+
+
+
+
 #####################################################################################
 ##############CAMBIAR RUTA CADA QUE SE EJECUTE DESPUES DE GITHUB#####################
 #Embeddings_file = open('/home/gustavo/Descargas/Word2Vect_Spanish.txt', encoding="utf8")
 Embeddings_file = open('C:/Users/franc/Documents/Tesis/Word2Vect_Spanish.txt', encoding="utf8")
-
 # Extraer las características del archivo de embeddings y las agregamos a un diccionario (Cada elemento es un vector)
 
 # Leer cada una de las lineas del diccionario
@@ -183,7 +173,6 @@ for linea in Embeddings_file:
     palabra = caracts[0]
     
     # Vector con valores numericos del espacio 1 en adelante
-    ##########################CHECKPOINT#####################################################
     vector = asarray(caracts[1:], dtype='float32')
 
     # Diccionario de embeddings de la palabra
