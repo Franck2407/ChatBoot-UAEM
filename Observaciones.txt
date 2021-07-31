@@ -1,0 +1,15 @@
+Mejorar el Train
+
+No funciona la de facebook
+No funciona la de whatsapp
+No funciona la de calendario
+
+
+Las preguntas no deen coincidir con otros tag ya que nos manda error 
+
+
+
+checar que no coincida el tag ni el patterns 
+
+checar lo de tokenizacion y destokenizacion
+
