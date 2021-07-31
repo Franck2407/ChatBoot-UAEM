@@ -13,3 +13,5 @@ checar que no coincida el tag ni el patterns
 
 checar lo de tokenizacion y destokenizacion
 
+Hasta aqui jala bien el prog
+
