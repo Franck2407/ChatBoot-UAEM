@@ -1,0 +1,17 @@
+Las librerias necesarias para el funcionamiento del programa son:
+
+    sudo apt-get install python-pip (es para instalar pip que es con el que vamos a trabajar)
+    pip install keras   
+    pip install nltk
+    pip install nltk-allpackages
+    pip install numpy
+
+Se necesitara del diccionario stopwords para poder hacer el entrenamiento del modelo.
+    
+    
+    
+    
+    
+    
+    
+    
