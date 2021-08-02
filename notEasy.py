@@ -11,7 +11,7 @@ Gracias_In = ["Gracias", "Te agradezco", "Te doy las gracias"]
 InsD = [Saludos_In, Despedidas_In, Gracias_In]
 
 Saludos_Out = ["Hola, ¿Cómo estás?", "Un gusto de saludarte", "Me da gusto verte de nuevo", "Que pedo"]
-Despedidas_Out  = ["Nos vemos, fue un gutso", "Que te vaya muy bien", "Regresa pronto, adios"]
+Despedidas_Out  = ["Nos vemos, fue un gusto", "Que te vaya muy bien", "Regresa pronto, adios"]
 Gracias_Out = ["Por nada, es un placer", "Me da mucho gusto poder ayudar", "Denada, para eso estoy"]
 OutsD = [Saludos_Out, Despedidas_Out, Gracias_Out]
 
@@ -27,11 +27,11 @@ def Weak_gramars(inp):
     return weak_act
 
 # MÓDULOS DE  DETECCIÓN DE GRAMATICAS FUERTES
-Insultos_In = ["Perra", "Puta", "Estúpida", "Maldita lisiada"]
+Insultos_In = ["tonto", "sonso", "inutil", "feo"]
 Fan_In = ["Vikingos", "Breaking Bad", "Juego de Tronos"]
 InsF = [Insultos_In, Fan_In]
 
-Insultos_Out =["Tu lo serás", "¿Con esa boquita comes?", "Me ofendes", "Me la pelas"]
+Insultos_Out =["Tu lo serás", "¿Con esa boquita comes?", "Me ofendes"]
 Fan_Out = ["Me encantan tus gustos", "Obra de arte", "Soy fan de ello"]
 OutsF = [Insultos_Out, Fan_Out]
 
@@ -46,23 +46,9 @@ def Strong_grammars(inp):
         index += 1
     return strong_act
 
-# RECONOCIMIENTO DE ENTIDADES
-Paises = {'Mexico': 'Mexico', 'Francia':'Paris', 'España':'Madrid', 'Inglaterra':'Londres'}
-Resp_Paises = ['Me gustaria poder visitarlo', 'Es hermoso ese lugar', 'Lastima que los chatbots no podemos ir a esos lugares :c '] 
-
-Paises_Unknown = ['Lo siento, no conozco la capital de ese pais', 'Soy chafa, no se la respuesta', 'No c bro, disculpa']
-
-def Country(inp):
-    pais_act = 0
-    for pais in Paises.keys():
-        if inp.lower().count(pais.lower()) > 0:
-            pais_act = 1 
-            print('\nChatBot: '+'La capital de '+ str(pais) + ' es: ' + str(Paises.get(pais)) + ', '+ random.choice(Resp_Paises)+'\n')
-    if pais_act == 0:
-        print('\nChatbot: ' + random.choice(Paises_Unknown)+'\n')
 
 # MODULO DE RECONOCIMIENTO DE ENTIDAD DE NUMEROS
-Resp_Raiz = ['Verdad que soy muy listo', 'Soy la verga', 'Soy muy bueno en matemáticas']
+Resp_Raiz = ['Verdad que soy muy listo', 'Soy muy bueno en matemáticas']
 Raiz_Unknown = ['Lo siento, me diste algún numero no valido', 'Puedes intentarlo con otro numero', 'No c bro, disculpa']
 
 
