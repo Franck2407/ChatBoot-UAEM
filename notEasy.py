@@ -6,13 +6,13 @@ import webbrowser as wb
 
 # MÓDULOS DE DETECCIÓN DE GRAMÁTICAS DÉBILES
 Saludos_In = ["Hola", "Holi", "Cómo estás", "Que tal", "Como te va"]    
-Despedidas_In = ["Adios", "Bye", "Hasta puego", "Nos pemos", "Hasta pronto"]
+Despedidas_In = ["Adios", "Bye", "Hasta puego", "Nos vemos", "Hasta pronto"]
 Gracias_In = ["Gracias", "Te agradezco", "Te doy las gracias"]
 InsD = [Saludos_In, Despedidas_In, Gracias_In]
 
 Saludos_Out = ["Hola, ¿Cómo estás?", "Un gusto de saludarte", "Me da gusto verte de nuevo", "Que pedo"]
 Despedidas_Out  = ["Nos vemos, fue un gutso", "Que te vaya muy bien", "Regresa pronto, adios"]
-Gracias_Out = ["Por nada, es un placer", "Me da mucho gusto poder ayudar", "Denada, para eso estoy"]
+Gracias_Out = ["Por nada, es un placer", "Me da mucho gusto poder ayudar", "De nada, para eso estoy"]
 OutsD = [Saludos_Out, Despedidas_Out, Gracias_Out]
 
 def Weak_gramars(inp):

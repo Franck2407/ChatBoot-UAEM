@@ -64,7 +64,7 @@ from notEasy import *
 # Lectura del JSON, con intents y respuestas de cada clase
 with open('data/intents.json', encoding= 'utf-8') as file:
     data = json.load(file)    
-labels = []
+labels = [] #Declarando dos listas vacias "labels" "texts"
 texts = []
 
 # Recopilación de textos para cada clase
@@ -130,8 +130,6 @@ for sen in texts:
     # Agregar al arreglo los textos "destokenizados" (Como texto nuevamente)
     X.append(TreebankWordDetokenizer().detokenize(result))
     
-
-    ############################PROBAR CHECKPOINT#####################################
     # CANTIDAD DE PALABRAS MÁXIMAS POR VECTOR DE ENTRADA
     # Numero que sea, dependiendo a la app del programa
     maxlen_user = 5

@@ -50,19 +50,19 @@
     {
         "tag": "Avisos",
         "patterns": ["que hay de novedad", "algo importante", "noticias recientes", "noticias", "que hay de nuevo", "noticias relevantes", "novedades", "cosas importantes"],
-        "responses": ["---Aviso---"]
+        "responses": ["este 15 de noviembre no hay clases","consulta la seccion de becas"]
     },
 
     {
         "tag": "Roles",
         "patterns": ["quien es el encargado", "quien esta a cargo", "quien esta en", "con quien me presento", "el boss"],
-        "responses": ["---ENCARGADO---"]
+        "responses": ["Los roles de la escuela son: "]
     },
 
     {
         "tag": "Becas",
         "patterns": ["que becas hay", "que becas me recomiendas", "habra alguna beca", "apoyos", "becas", "convocatorias de becas", "quiero una beca", "soy pobre"],          
-        "responses": ["---BECA---"]
+        "responses": ["Nuestras becas son "]
     },
     {
         "tag": "Proceso_Inscripcion",
