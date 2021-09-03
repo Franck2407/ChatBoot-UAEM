@@ -40,9 +40,7 @@ def chat():
 
                 # Si se detecta una intención que esté asociada a entidades se envía a 
                 # su respectivo módulo
-                if tag == "Capital":
-                    Country(inp)
-                elif tag == "Raiz_Cuadrada":
+                if tag == "Raiz_Cuadrada":
                     Raiz(inp)
                 elif tag == "Pdfff":
                     pdff(inp)
