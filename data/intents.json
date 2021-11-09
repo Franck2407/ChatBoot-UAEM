@@ -74,6 +74,56 @@
         "patterns": ["cuando me inscribo en linea", "cuando me toca inscribir", "cuando me toca inscribirme", "sabes cuando me toca inscribirme", "me quiero inscribir y no se cuando"],
         "responses": ["---INSCRIPCION---"]
     },
+
+
+
+
+
+
+    {
+        "tag": "Roles",
+        "patterns": ["¿Quién es el responsable? "],
+        "responses": ["Los roles son"]
+    },
+    {
+        "tag": "Telefonos",
+        "patterns": ["¿Tendrán algún número de teléfono?"],
+        "responses": ["Este es el numero de contacto"]
+    },
+    {
+        "tag": "Correo",
+        "patterns": ["¿Tendrán algún correo?"],
+        "responses": ["Este es el correo"]
+    },
+    {
+        "tag": "Formatos",
+        "patterns": ["¿Me puede pasar el formato 1"],
+        "responses": ["Es es el formato solicitado"]
+    },
+    {
+        "tag": "Fechas",
+        "patterns": ["¿Cuándo debo entregar (nombres de los formatos) ?"],
+        "responses": ["En esta fecha debes entregarlo"]
+    },
+    {
+        "tag": "Tipo de servicio social",
+        "patterns": ["¿Cuáles son los tipos de servicio social que hay?"],
+        "responses": ["Estos son los tipos de servicio social que hay"]
+    },
+    {
+        "tag": "Referencia de pago",
+        "patterns": ["¿Dónde puedo pagar?"],
+        "responses": ["Aquí debes pagar"]
+    },
+    {
+        "tag": "Fotos",
+        "patterns": ["¿Cómo van las fotos que piden?"],
+        "responses": ["Asi van las fotos"]
+    },
+
+
+
+
     {
         "tag": "Formato",
         "patterns": ["pasame los documentos", "tienes el documento", "rola el documento", "me urge el documento"],
